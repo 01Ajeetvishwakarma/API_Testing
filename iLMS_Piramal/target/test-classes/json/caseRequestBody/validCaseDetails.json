@@ -1,0 +1,97 @@
+{
+  "RequestInfo": {
+    "apiId": "",
+    "ver": "",
+    "ts": "",
+    "resMsgId": "uief87324",
+    "msgId": "",
+    "status": "ACTIVE",
+    "authToken": "{{authToken}}",
+    "userInfo": {
+      "id": 97,
+      "uuid": "68bf2518-bdf4-4db6-8930-0571d3ed50fb",
+      "userName": "EMP_DEC",
+      "name": "Rishav Johari",
+      "mobileNumber": "8057353933",
+      "emailId": "rishav.johari@walkingtree.tech",
+      "locale": null,
+      "type": "EMPLOYEE",
+      "roles": [
+        {
+          "name": "Data Entry Cell",
+          "code": "DEC",
+          "tenantId": "mp"
+        },
+        {
+          "name": "Employee",
+          "code": "EMPLOYEE",
+          "tenantId": "mp"
+        }
+      ],
+      "active": true,
+      "tenantId": "mp",
+      "permanentCity": null
+    }
+  },
+  "case": {
+    "creationReason": "CREATE",
+    "tenantId": "mp",
+    "caseNumber": "{{caseNumber}}",
+    "cnrNumber": "{{cnrNumber}}",
+    "parentCaseId": "",
+    "caseHierarchy": "PARENT",
+    "caseType": "ARB-DC",
+    "caseCategory": "SM001",
+    "caseYear": 2022,
+    "filingNumber": "filing123",
+    "filingDate": 1669959086142,
+    "registrationDate": 1669959086142,
+    "caseSummary": "test Case",
+    "arisingDetails": "Case Create",
+    "policyOrNonPolicyMatter": "yes",
+    "applicationNo": "Case123456",
+    "isCaseNumberCorrect": true,
+    "caseStatus": "PFA001",
+    "firstHearingDate": 1669959086142,
+    "previousHearingDate": null,
+    "nextHearingDate": 1669959086142,
+    "caseStage": "NOP-CP",
+    "caseSubStage": "DE-DEC",
+    "caseFlag": null,
+    "departmentName": "DP002",
+    "recommendOic": "DPC002",
+    "remarks": "nothing",
+    "assignedOfficerId": "7f9eb8f9-d954-4f65-affc-13034318fd2a",
+    "additionalDetails": null,
+    "act": {
+      "actName": "Act305",
+      "sectionNumber": "125"
+    },
+    "respondent": {
+      "firstName": "RAj",
+      "lastName": "SIngh",
+      "gender": "MALE",
+      "departmentName": "Develop",
+      "contactNumber": "0987675431",
+      "address": "Agra",
+      "advocate": {
+        "firstName": "Manoj",
+        "lastName": "kumar",
+        "contactNumber": "8790654321"
+      }
+    },
+    "petitioner": {
+      "firstName": "shyam",
+      "lastName": "Kumar",
+      "gender": "MALE",
+      "petitionerType": "A001",
+      "address": "agra",
+      "contactNumber": "8423324685",
+      "advocate": {
+        "firstName": "Raju",
+        "lastName": "Singh",
+        "contactNumber": "9876543210"
+      }
+    }
+  }
+}
