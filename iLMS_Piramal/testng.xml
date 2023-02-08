@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="iLMS_Piramal">
+    <listeners>
+        <listener class-name="reports.ReportSetup"></listener>
+    </listeners>
+    <test name="Piramal API Automation" verbose="2" preserve-order="true">
+        <classes>
+            <class name="case_module.CaseCreate">
+                <methods>
+<!--                    <include name="createParentCaseWithValidData"/>-->
+                    <include name="nullCaseNumber"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
