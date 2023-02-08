@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [iLMS_Piramal]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="ExtentReports.ReportSetup"/>
+  </listeners>
+  <test thread-count="5" name="Piramal API Automation(failed)" verbose="0">
+    <classes>
+      <class name="case_module.CaseCreate">
+        <methods>
+          <include name="nullCaseNumber1"/>
+        </methods>
+      </class> <!-- case_module.CaseCreate -->
+    </classes>
+  </test> <!-- Piramal API Automation(failed) -->
+</suite> <!-- Failed suite [iLMS_Piramal] -->
