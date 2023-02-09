@@ -25,7 +25,7 @@ public class ExtentReportManager {
         ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter(fileName);
         extentSparkReporter.config().setReportName(reportName);
         extentSparkReporter.config().setDocumentTitle(documentTitle);
-        extentSparkReporter.config().setTheme(Theme.DARK);
+        extentSparkReporter.config().setTheme(Theme.STANDARD);
         extentSparkReporter.config().setEncoding("utf-8");
 
         extentReports = new ExtentReports();

@@ -1,18 +1,10 @@
 package iLMSActions.casemodule;
 
 import case_module.caseData.ParentCaseData;
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.specification.QueryableRequestSpecification;
-import io.restassured.specification.RequestSpecification;
-import io.restassured.specification.SpecificationQuerier;
-import ExtentReports.ExtentReportManager;
 
 import static case_module.caseData.ParentCaseData.*;
-import static constants.Endpoints.*;
 import static iLMSActions.casemodule.CreateCase.caseCreate;
-import static io.restassured.RestAssured.given;
 
 /**
  * @author Ajeet Vishwakarma
@@ -23,28 +15,22 @@ public class CreateCaseActions {
 
     static ParentCaseData caseData = new ParentCaseData();
 
-
-    private static RequestSpecification getRequestSpecification(Object jsonPayload)
+    /*private static RequestSpecification getRequestSpecification(Object jsonPayload)
     {
         return RestAssured.given()
                 .contentType(ContentType.JSON)
                 .body(jsonPayload)
                 .log().all();
     }
-    public static Response createCase(Object jsonPayload) {
+    public static Response caseCreate(Object jsonPayload) {
         RequestSpecification requestSpecification = getRequestSpecification(jsonPayload);
         Response response = requestSpecification.post(PIRAMAL_BASE_URL+CREATE_CASE);
         printRequestLogReport(requestSpecification);
         printResponseLogReport(response);
 
         return response;
-    }
-
-
-
-
-
-    public static Response createTheCase(Object jsonPayload) {
+    }*/
+    /*public static Response createTheCase(Object jsonPayload) {
         Response response = given()
                 .contentType(ContentType.JSON)
                 .body(jsonPayload)
@@ -72,234 +58,225 @@ public class CreateCaseActions {
         ExtentReportManager.logHeader(response.getHeaders().asList());
         ExtentReportManager.logInfoDetails("Response body: ");
         ExtentReportManager.logJson(response.getBody().prettyPrint());
-    }
+    }*/
 
 
     public static Response createParentCaseWithValidData() {
-//        return createCase(caseData.validCaseDetails);
-        return createCase(caseData.validCaseDetails);
-//        return createCase(caseData.getCaseBody().toString());
+//        return caseCreate(caseData.validCaseDetails);
+//        return caseCreate(caseData.validCaseDetails);
+//        return caseCreate(caseData.getCaseBody().toString());
+        return null;
     }
 
 
 
 
-
+    public static Response caseWithValidData() {
+        return caseCreate(validCaseRequestBody());
+    }
     public static Response emptyCaseNumber() {
         return caseCreate(caseNumberEmpty());
     }
     public static Response nullCaseNumber() {
         return caseCreate(caseNumberNull());
     }
-
-
-
-    public static Response nullCaseNumber1() {
-        return createCase(validCaseRequestBody());
-    }
-//    public static Response nullCaseNumber2() {
-//        return createCaseUsingPojo(validCaseRequestBody());
-//    }
-
-
-
     public static Response emptyCaseType() {
         return caseCreate(caseTypeEmpty());
     }
     public static Response nullCaseType() {
-        return createCase(caseData.nullCaseType);
+        return caseCreate(caseTypeNull());
     }
     public static Response emptyCaseCategory() {
-        return createCase(caseData.emptyCaseCategory);
+        return caseCreate(caseCategoryEmpty());
     }
     public static Response nullCaseCategory() {
-        return createCase(caseData.nullCaseCategory);
+        return caseCreate(caseCategoryNull());
     }
     public static Response nullCaseYear() {
-        return createCase(caseData.nullCaseYear);
+        return caseCreate(caseYearNull());
     }
     public static Response emptyFilingNumber() {
-        return createCase(caseData.emptyFilingNumber);
+        return caseCreate(filingNumberEmpty());
     }
     public static Response nullFilingNumber() {
-        return createCase(caseData.nullFilingNumber);
+        return caseCreate(filingNumberNull());
     }
     public static Response nullFilingDate() {
-        return createCase(caseData.nullFilingDate);
+        return caseCreate(filingDateNull());
     }
     public static Response nullRegistrationDate() {
-        return createCase(caseData.nullRegistrationDate);
+        return caseCreate(registrationDateNull());
     }
     public static Response emptyCaseSummary() {
-        return createCase(caseData.emptyCaseSummary);
+        return caseCreate(caseSummaryEmpty());
     }
     public static Response nullCaseSummary() {
-        return createCase(caseData.nullCaseSummary);
+        return caseCreate(caseSummaryNull());
     }
     public static Response emptyPolicyOrNonPolicyMatter() {
-        return createCase(caseData.emptyPolicyOrNonPolicyMatter);
+        return caseCreate(policyOrNonPolicyMatterEmpty());
     }
     public static Response nullPolicyOrNonPolicyMatter() {
-        return createCase(caseData.nullPolicyOrNonPolicyMatter);
+        return caseCreate(policyOrNonPolicyMatterNull());
     }
     public static Response nullIsCaseNumberCorrect() {
-        return createCase(caseData.nullIsCaseNumberCorrect);
+        return caseCreate(isCaseNumberCorrectNull());
     }
     public static Response falseIsCaseNumberCorrect() {
-        return createCase(caseData.falseIsCaseNumberCorrect);
+        return caseCreate(isCaseNumberCorrect());
     }
     public static Response emptyCaseStatus() {
-        return createCase(caseData.emptyCaseStatus);
+        return caseCreate(caseStatusEmpty());
     }
     public static Response nullCaseStatus() {
-        return createCase(caseData.nullCaseStatus);
+        return caseCreate(caseStatusNull());
     }
     public static Response nullFirstHearingDate() {
-        return createCase(caseData.nullFirstHearingDate);
+        return caseCreate(firstHearingDateNull());
     }
     public static Response invalidFirstHearingDate() {
-        return createCase(caseData.invalidFirstHearingDate);
+        return caseCreate(firstHearingDateInvalid());
     }
     public static Response nullPreviousHearingDate() {
-        return createCase(caseData.nullPreviousHearingDate);
+        return caseCreate(previousHearingDateNull());
     }
     public static Response inValidPreviousHearingDate() {
-        return createCase(caseData.inValidPreviousHearingDate);
+        return caseCreate(previousHearingDateInvalid());
     }
     public static Response nullNextHearingDate() {
-        return createCase(caseData.nullNextHearingDate);
+        return caseCreate(nextHearingDateNull());
     }
     public static Response inValidNextHearingDate() {
-        return createCase(caseData.inValidNextHearingDate);
+        return caseCreate(nextHearingDateInvalid());
     }
     public static Response emptyCaseStage() {
-        return createCase(caseData.emptyCaseStage);
+        return caseCreate(caseStageEmpty());
     }
     public static Response nullCaseStage() {
-        return createCase(caseData.nullCaseStage);
+        return caseCreate(caseStageNull());
     }
     public static Response emptyCaseSubStage() {
-        return createCase(caseData.emptyCaseSubStage);
+        return caseCreate(caseSubStageEmpty());
     }
     public static Response nullCaseSubStage() {
-        return createCase(caseData.nullCaseSubStage);
+        return caseCreate(caseSubStageNull());
     }
     public static Response emptyDepartmentName() {
-        return createCase(caseData.emptyDepartmentName);
+        return caseCreate(departmentNameEmpty());
     }
     public static Response nullDepartmentName() {
-        return createCase(caseData.nullDepartmentName);
+        return caseCreate(departmentNameNull());
     }
     public static Response emptyRecommendOic() {
-        return createCase(caseData.emptyRecommendOic);
+        return caseCreate(recommendOicEmpty());
     }
     public static Response nullRecommendOic() {
-        return createCase(caseData.nullRecommendOic);
+        return caseCreate(recommendOicNull());
     }
     public static Response emptyActName() {
-        return createCase(caseData.emptyActName);
+        return caseCreate(actNameEmpty());
     }
     public static Response nullActName() {
-        return createCase(caseData.nullActName);
+        return caseCreate(actNameNull());
     }
     public static Response emptySectionNumber() {
-        return createCase(caseData.emptySectionNumber);
+        return caseCreate(sectionNumberEmpty());
     }
     public static Response nullSectionNumber() {
-        return createCase(caseData.nullSectionNumber);
+        return caseCreate(sectionNumberNull());
     }
     public static Response emptyRespondentFirstName() {
-        return createCase(caseData.emptyRespondentFirstName);
+        return caseCreate(respondentFirstNameEmpty());
     }
     public static Response nullRespondentFirstName() {
-        return createCase(caseData.nullRespondentFirstName);
+        return caseCreate(respondentFirstNameNull());
     }
     public static Response emptyRespondentLastName() {
-        return createCase(caseData.emptyRespondentLastName);
+        return caseCreate(respondentLastNameEmpty());
     }
     public static Response nullRespondentLastName() {
-        return createCase(caseData.nullRespondentLastName);
+        return caseCreate(respondentLastNameNull());
     }
     public static Response emptyRespondentDepartmentName() {
-        return createCase(caseData.emptyRespondentDepartmentName);
+        return caseCreate(respondentDepartmentNameEmpty());
     }
     public static Response nullRespondentDepartmentName() {
-        return createCase(caseData.nullRespondentDepartmentName);
+        return caseCreate(respondentDepartmentNameNull());
     }
     public static Response emptyRespondentContactNumber() {
-        return createCase(caseData.emptyRespondentContactNumber);
+        return caseCreate(respondentContactNumberEmpty());
     }
     public static Response nullRespondentContactNumber() {
-        return createCase(caseData.nullRespondentContactNumber);
+        return caseCreate(respondentContactNumberNull());
     }
     public static Response emptyRespondentAddress() {
-        return createCase(caseData.emptyRespondentAddress);
+        return caseCreate(respondentAddressEmpty());
     }
     public static Response nullRespondentAddress() {
-        return createCase(caseData.nullRespondentAddress);
+        return caseCreate(respondentAddressNull());
     }
     public static Response emptyRespondentAdvocateFirstName() {
-        return createCase(caseData.emptyRespondentAdvocateFirstName);
+        return caseCreate(respondentAdvocateFirstNameEmpty());
     }
     public static Response nullRespondentAdvocateFirstName() {
-        return createCase(caseData.nullRespondentAdvocateFirstName);
+        return caseCreate(respondentAdvocateFirstNameNull());
     }
     public static Response emptyRespondentAdvocateLastName() {
-        return createCase(caseData.emptyRespondentAdvocateLastName);
+        return caseCreate(respondentAdvocateLastNameEmpty());
     }
     public static Response nullRespondentAdvocateLastName() {
-        return createCase(caseData.nullRespondentAdvocateLastName);
+        return caseCreate(respondentAdvocateLastNameNull());
     }
     public static Response emptyRespondentAdvocateContactNumber() {
-        return createCase(caseData.emptyRespondentAdvocateContactNumber);
+        return caseCreate(respondentAdvocateContactNumberEmpty());
     }
     public static Response nullRespondentAdvocateContactNumber() {
-        return createCase(caseData.nullRespondentAdvocateContactNumber);
+        return caseCreate(respondentAdvocateContactNumberNull());
     }
     public static Response emptyPetitionerFirstName() {
-        return createCase(caseData.emptyPetitionerFirstName);
+        return caseCreate(petitionerFirstNameEmpty());
     }
     public static Response nullPetitionerFirstName() {
-        return createCase(caseData.nullPetitionerFirstName);
+        return caseCreate(petitionerFirstNameNull());
     }
     public static Response nullPetitionerLastName() {
-        return createCase(caseData.nullPetitionerLastName);
+        return caseCreate(petitionerLastNameNull());
     }
     public static Response emptyPetitionerType() {
-        return createCase(caseData.emptyPetitionerType);
+        return caseCreate(petitionerTypeEmpty());
     }
     public static Response nullPetitionerType() {
-        return createCase(caseData.nullPetitionerType);
+        return caseCreate(petitionerTypeNull());
     }
     public static Response emptyPetitionerAddress() {
-        return createCase(caseData.emptyPetitionerAddress);
+        return caseCreate(petitionerAddressEmpty());
     }
     public static Response nullPetitionerAddress() {
-        return createCase(caseData.nullPetitionerAddress);
+        return caseCreate(petitionerAddressNull());
     }
     public static Response emptyPetitionerContactNumber() {
-        return createCase(caseData.emptyPetitionerContactNumber);
+        return caseCreate(petitionerContactNumberEmpty());
     }
     public static Response nullPetitionerContactNumber() {
-        return createCase(caseData.nullPetitionerContactNumber);
+        return caseCreate(petitionerContactNumberNull());
     }
     public static Response emptyPetitionerAdvocateFirstName() {
-        return createCase(caseData.emptyPetitionerAdvocateFirstName);
+        return caseCreate(emptyPetitionerAdvocateFirstNameEmpty());
     }
     public static Response nullPetitionerAdvocateFirstName() {
-        return createCase(caseData.nullPetitionerAdvocateFirstName);
+        return caseCreate(petitionerAdvocateFirstNameNull());
     }
     public static Response emptyPetitionerAdvocateLastName() {
-        return createCase(caseData.emptyPetitionerAdvocateLastName);
+        return caseCreate(petitionerAdvocateLastNameEmpty());
     }
     public static Response nullPetitionerAdvocateLastName() {
-        return createCase(caseData.nullPetitionerAdvocateLastName);
+        return caseCreate(petitionerAdvocateLastNameNull());
     }
     public static Response emptyPetitionerAdvocateContactNumber() {
-        return createCase(caseData.emptyPetitionerAdvocateContactNumber);
+        return caseCreate(petitionerAdvocateContactNumberEmpty());
     }
     public static Response nullPetitionerAdvocateContactNumber() {
-        return createCase(caseData.nullPetitionerAdvocateContactNumber);
+        return caseCreate(petitionerAdvocateContactNumberNull());
     }
 
 

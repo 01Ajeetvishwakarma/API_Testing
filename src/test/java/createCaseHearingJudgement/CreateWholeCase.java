@@ -1,11 +1,13 @@
 package createCaseHearingJudgement;
 
+import iLMSActions.hearing.CreateHearingActions;
+import iLMSActions.judgement.createJudgementActions;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 import iLMSActions.casemodule.CreateCaseActions;
 
-import static iLMSActions.hearing.CreateHearingActions.createHearingWithValidData;
-import static iLMSActions.judgement.createJudgementActions.createJudgementWithValidData;
+
+
 
 
 /**
@@ -22,9 +24,9 @@ public class CreateWholeCase {
         String caseId = createCase.jsonPath().getString("caseList.id[0]");
         String caseNumber = createCase.jsonPath().getString("caseList.caseNumber[0]");
 
-        createHearingWithValidData(caseId,caseNumber);
+        CreateHearingActions.createHearingWithValidData(caseId,caseNumber);
 
-        Response createJudgement = createJudgementWithValidData(caseId);
+        Response createJudgement = createJudgementActions.createJudgementWithValidData(caseId);
         createJudgement.getBody().prettyPrint();
     }
 

@@ -1,5 +1,7 @@
 package judgement_module;
 
+import iLMSActions.hearing.CreateHearingActions;
+import iLMSActions.judgement.createJudgementActions;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
@@ -7,8 +9,8 @@ import iLMSActions.casemodule.CreateCaseActions;
 
 import static constants.Endpoints.*;
 import static io.restassured.RestAssured.given;
-import static iLMSActions.hearing.CreateHearingActions.createHearingWithValidData;
-import static iLMSActions.judgement.createJudgementActions.createJudgementWithValidData;
+
+
 
 /**
  * @author Ajeet Vishwakarma
@@ -16,41 +18,7 @@ import static iLMSActions.judgement.createJudgementActions.createJudgementWithVa
  */
 public class CreateJudgement {
 
-//    public static Response createJudgement(String caseId) {
-//
-//        String payload = "{\n" +
-//                "   \"RequestInfo\": {\n" +
-//                "        \"apiId\": \"\",\n" +
-//                "        \"ver\": \"\",\n" +
-//                "        \"ts\": null,\n" +
-//                "        \"resMsgId\": \"uief87324\",\n" +
-//                "        \"msgId\": \"\",\n" +
-//                "        \"status\": \"ACTIVE\",\n" +
-//                "        \"userInfo\": {\n" +
-//                "            \"userName\": \"Avanish\"\n" +
-//                "        }\n" +
-//                "    },\n" +
-//                "    \"judgement\": {\n" +
-//                "        \"caseId\": \""+caseId+"\",\n" +
-//                "        \"orderType\": \"INTO001\",\n" +
-//                "        \"orderDate\": 1669959086142,\n" +
-//                "        \"decisionStatus\": \"false\",\n" +
-//                "        \"complianceDate\": 1669959086142,\n" +
-//                "        \"revisedComplianceDate\": 1669959086142,\n" +
-//                "        \"orderNoOverride\": \"2022\",\n" +
-//                "        \"revisedComplainceReason\": \"NewJudgement\",\n" +
-//                "        \"complianceStatus\": \"COMP-CMPL\",\n" +
-//                "        \"remarks\": 20221114\n" +
-//                "    }\n" +
-//                "}";
-//
-//        Response response = given().contentType(ContentType.JSON)
-//                .body(payload)
-//                .when()
-//                .post(PIRAMAL_BASE_URL+CREATE_JUDGEMENT);
-//
-//        return response;
-//    }
+
 
 
     @Test
@@ -97,9 +65,9 @@ public class CreateJudgement {
         String caseId = createResponse.jsonPath().getString("caseList.id[0]");
         String caseNumber = createResponse.jsonPath().getString("caseList.caseNumber[0]");
 
-        createHearingWithValidData(caseId,caseNumber);
+        CreateHearingActions.createHearingWithValidData(caseId,caseNumber);
 
-        Response judgementResponse = createJudgementWithValidData(caseId);
+        Response judgementResponse = createJudgementActions.createJudgementWithValidData(caseId);
         judgementResponse.getBody().prettyPrint();
     }
 

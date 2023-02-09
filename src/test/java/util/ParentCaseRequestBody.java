@@ -71,7 +71,7 @@ public class ParentCaseRequestBody {
         cases.setArisingDetails("case creation");
         cases.setPolicyOrNonPolicyMatter("yes");
         cases.setApplicationNo("case34567");
-        cases.setIsCaseNumberCorrect("true");
+        cases.setCaseNumberCorrect(true);
         cases.setCaseStatus("PA0002");
         cases.setFirstHearingDate("1669959086142");
         cases.setPreviousHearingDate("1669959086142");

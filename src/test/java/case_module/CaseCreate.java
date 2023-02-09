@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import iLMSActions.casemodule.CreateCaseActions;
 
-import static case_module.CaseSearch.caseSearchByCaseNumber;
+
 
 
 /**
@@ -46,7 +46,7 @@ public class CaseCreate {
         System.out.println("documentType: "+documentType);
         System.out.println("***************************************************");
 
-        Response searchResponse = caseSearchByCaseNumber(caseNumber);
+        Response searchResponse = CaseSearch.caseSearchByCaseNumber(caseNumber);
         searchResponse.prettyPrint();
 
         String searchCaseId = createResponse.jsonPath().getString("caseList.id[0]");

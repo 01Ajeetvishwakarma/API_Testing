@@ -66,7 +66,7 @@ public class Case {
     private String applicationNo;
 
     @JsonProperty("isCaseNumberCorrect")
-    private String isCaseNumberCorrect;
+    private Boolean caseNumberCorrect;
 
     @JsonProperty("caseStatus")
     private String caseStatus;
