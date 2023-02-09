@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-iLMS_Piramal">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-iLMS_Piramal" title="case_module.CaseCreate" class="method navigator-link" hash-for-method="nullCaseNumber">nullCaseNumber</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-iLMS_Piramal" title="case_module.CaseCreate" class="method navigator-link" hash-for-method="emptyCaseNumber">emptyCaseNumber</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-iLMS_Piramal -->
@@ -126,12 +126,117 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="nullCaseNumber">
-                  </a> <!-- nullCaseNumber -->
-                  <span class="method-name">nullCaseNumber</span>
-                  <div class="stack-trace">java.lang.ClassCastException: class java.util.LinkedHashMap cannot be cast to class java.lang.String (java.util.LinkedHashMap and java.lang.String are in module java.base of loader &apos;bootstrap&apos;)
-	at iLMSActions.casemodule.CreateCaseActions.nullCaseNumber1(CreateCaseActions.java:90)
-	at case_module.CaseCreate.nullCaseNumber(CaseCreate.java:101)
+                  <a name="emptyCaseNumber">
+                  </a> <!-- emptyCaseNumber -->
+                  <span class="method-name">emptyCaseNumber</span>
+                  <div class="stack-trace">java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:608)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:349)
+	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1209)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:146)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:157)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:176)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+	at iLMSActions.casemodule.CreateCase.caseCreate(CreateCase.java:48)
+	at iLMSActions.casemodule.CreateCaseActions.emptyCaseNumber(CreateCaseActions.java:78)
+	at case_module.CaseCreate.emptyCaseNumber(CaseCreate.java:90)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -181,13 +286,13 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;iLMS_Piramal&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;reports.ReportSetup&quot;/&gt;
+    &lt;listener class-name=&quot;ExtentReports.ReportSetup&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Piramal API Automation&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;case_module.CaseCreate&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;nullCaseNumber&quot;/&gt;
+          &lt;include name=&quot;emptyCaseNumber&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- case_module.CaseCreate --&gt;
     &lt;/classes&gt;
@@ -231,14 +336,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'nullCaseNumber')
+data.setCell(0, 1, 'emptyCaseNumber')
 data.setCell(0, 2, 'case_module.CaseCreate')
-data.setCell(0, 3, 11);
+data.setCell(0, 3, 3755);
 window.suiteTableData['iLMS_Piramal']= { tableData: data, tableDiv: 'times-div-iLMS_Piramal'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 ms</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-iLMS_Piramal">
               </div> <!-- times-div-iLMS_Piramal -->
             </div> <!-- times-div -->
@@ -253,149 +358,147 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-iLMS_Piramal" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">69 ignored methods</span>
+            <span class="header-content">68 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">case_module.CaseCreate</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">emptyRespondentFirstName</span>
-                <br/>
-                <span class="ignored-method-name">emptyPetitionerFirstName</span>
-                <br/>
-                <span class="ignored-method-name">emptyRespondentAdvocateContactNumber</span>
-                <br/>
-                <span class="ignored-method-name">nullCaseCategory</span>
-                <br/>
-                <span class="ignored-method-name">emptyPetitionerAdvocateFirstName</span>
-                <br/>
-                <span class="ignored-method-name">nullPetitionerAdvocateLastName</span>
-                <br/>
-                <span class="ignored-method-name">nullNextHearingDate</span>
-                <br/>
-                <span class="ignored-method-name">nullPetitionerType</span>
-                <br/>
-                <span class="ignored-method-name">nullRespondentLastName</span>
-                <br/>
-                <span class="ignored-method-name">emptyPolicyOrNonPolicyMatter</span>
-                <br/>
-                <span class="ignored-method-name">inValidPreviousHearingDate</span>
-                <br/>
-                <span class="ignored-method-name">nullCaseSummary</span>
-                <br/>
-                <span class="ignored-method-name">emptyCaseSubStage</span>
-                <br/>
-                <span class="ignored-method-name">emptySectionNumber</span>
-                <br/>
-                <span class="ignored-method-name">emptyCaseStage</span>
-                <br/>
-                <span class="ignored-method-name">emptyCaseSummary</span>
-                <br/>
-                <span class="ignored-method-name">nullRespondentContactNumber</span>
-                <br/>
-                <span class="ignored-method-name">emptyPetitionerAdvocateContactNumber</span>
-                <br/>
-                <span class="ignored-method-name">emptyPetitionerAddress</span>
-                <br/>
-                <span class="ignored-method-name">emptyDepartmentName</span>
-                <br/>
-                <span class="ignored-method-name">emptyCaseCategory</span>
-                <br/>
-                <span class="ignored-method-name">nullRespondentAdvocateFirstName</span>
-                <br/>
-                <span class="ignored-method-name">nullPolicyOrNonPolicyMatter</span>
-                <br/>
-                <span class="ignored-method-name">emptyRespondentContactNumber</span>
-                <br/>
-                <span class="ignored-method-name">nullDepartmentName</span>
-                <br/>
-                <span class="ignored-method-name">emptyRespondentDepartmentName</span>
-                <br/>
-                <span class="ignored-method-name">nullRegistrationDate</span>
-                <br/>
-                <span class="ignored-method-name">emptyActName</span>
-                <br/>
-                <span class="ignored-method-name">createParentCaseWithValidData</span>
-                <br/>
-                <span class="ignored-method-name">emptyPetitionerContactNumber</span>
-                <br/>
-                <span class="ignored-method-name">emptyPetitionerType</span>
-                <br/>
-                <span class="ignored-method-name">nullCaseYear</span>
-                <br/>
-                <span class="ignored-method-name">nullPetitionerAddress</span>
-                <br/>
-                <span class="ignored-method-name">nullRespondentFirstName</span>
-                <br/>
                 <span class="ignored-method-name">nullPetitionerFirstName</span>
                 <br/>
                 <span class="ignored-method-name">nullFirstHearingDate</span>
                 <br/>
-                <span class="ignored-method-name">emptyCaseNumber</span>
-                <br/>
                 <span class="ignored-method-name">emptyFilingNumber</span>
                 <br/>
-                <span class="ignored-method-name">nullRespondentAdvocateContactNumber</span>
+                <span class="ignored-method-name">nullCaseYear</span>
                 <br/>
                 <span class="ignored-method-name">emptyCaseType</span>
                 <br/>
-                <span class="ignored-method-name">emptyPetitionerAdvocateLastName</span>
+                <span class="ignored-method-name">createParentCaseWithValidData</span>
                 <br/>
-                <span class="ignored-method-name">nullFilingNumber</span>
+                <span class="ignored-method-name">nullRespondentFirstName</span>
                 <br/>
-                <span class="ignored-method-name">nullCaseStage</span>
-                <br/>
-                <span class="ignored-method-name">nullRespondentDepartmentName</span>
-                <br/>
-                <span class="ignored-method-name">nullCaseSubStage</span>
-                <br/>
-                <span class="ignored-method-name">nullRespondentAdvocateLastName</span>
-                <br/>
-                <span class="ignored-method-name">nullPreviousHearingDate</span>
-                <br/>
-                <span class="ignored-method-name">nullIsCaseNumberCorrect</span>
-                <br/>
-                <span class="ignored-method-name">falseIsCaseNumberCorrect</span>
-                <br/>
-                <span class="ignored-method-name">nullCaseStatus</span>
-                <br/>
-                <span class="ignored-method-name">invalidFirstHearingDate</span>
-                <br/>
-                <span class="ignored-method-name">nullRespondentAddress</span>
-                <br/>
-                <span class="ignored-method-name">inValidNextHearingDate</span>
-                <br/>
-                <span class="ignored-method-name">emptyRespondentAddress</span>
-                <br/>
-                <span class="ignored-method-name">emptyCaseStatus</span>
-                <br/>
-                <span class="ignored-method-name">createCaseEmptyCaseType</span>
-                <br/>
-                <span class="ignored-method-name">nullCaseType</span>
-                <br/>
-                <span class="ignored-method-name">nullSectionNumber</span>
-                <br/>
-                <span class="ignored-method-name">nullRecommendOic</span>
-                <br/>
-                <span class="ignored-method-name">nullFilingDate</span>
-                <br/>
-                <span class="ignored-method-name">nullPetitionerAdvocateFirstName</span>
-                <br/>
-                <span class="ignored-method-name">nullPetitionerAdvocateContactNumber</span>
+                <span class="ignored-method-name">nullRespondentAdvocateContactNumber</span>
                 <br/>
                 <span class="ignored-method-name">nullActName</span>
                 <br/>
                 <span class="ignored-method-name">emptyRespondentLastName</span>
                 <br/>
+                <span class="ignored-method-name">nullCaseType</span>
+                <br/>
+                <span class="ignored-method-name">emptyPetitionerAdvocateContactNumber</span>
+                <br/>
+                <span class="ignored-method-name">nullPetitionerAddress</span>
+                <br/>
+                <span class="ignored-method-name">emptyDepartmentName</span>
+                <br/>
+                <span class="ignored-method-name">nullRegistrationDate</span>
+                <br/>
+                <span class="ignored-method-name">nullDepartmentName</span>
+                <br/>
+                <span class="ignored-method-name">emptyCaseCategory</span>
+                <br/>
+                <span class="ignored-method-name">emptyActName</span>
+                <br/>
                 <span class="ignored-method-name">nullPetitionerContactNumber</span>
                 <br/>
-                <span class="ignored-method-name">emptyRespondentAdvocateFirstName</span>
-                <br/>
-                <span class="ignored-method-name">emptyRespondentAdvocateLastName</span>
+                <span class="ignored-method-name">emptyRespondentContactNumber</span>
                 <br/>
                 <span class="ignored-method-name">nullPetitionerLastName</span>
                 <br/>
+                <span class="ignored-method-name">emptyCaseSubStage</span>
+                <br/>
+                <span class="ignored-method-name">emptyPolicyOrNonPolicyMatter</span>
+                <br/>
+                <span class="ignored-method-name">nullRespondentLastName</span>
+                <br/>
+                <span class="ignored-method-name">nullSectionNumber</span>
+                <br/>
+                <span class="ignored-method-name">nullFilingDate</span>
+                <br/>
+                <span class="ignored-method-name">emptyCaseStatus</span>
+                <br/>
+                <span class="ignored-method-name">nullCaseStatus</span>
+                <br/>
+                <span class="ignored-method-name">invalidFirstHearingDate</span>
+                <br/>
+                <span class="ignored-method-name">nullCaseCategory</span>
+                <br/>
+                <span class="ignored-method-name">nullRespondentAdvocateLastName</span>
+                <br/>
+                <span class="ignored-method-name">nullNextHearingDate</span>
+                <br/>
+                <span class="ignored-method-name">emptyPetitionerType</span>
+                <br/>
+                <span class="ignored-method-name">nullCaseSubStage</span>
+                <br/>
+                <span class="ignored-method-name">emptyPetitionerContactNumber</span>
+                <br/>
+                <span class="ignored-method-name">falseIsCaseNumberCorrect</span>
+                <br/>
+                <span class="ignored-method-name">nullRespondentDepartmentName</span>
+                <br/>
+                <span class="ignored-method-name">nullIsCaseNumberCorrect</span>
+                <br/>
+                <span class="ignored-method-name">nullFilingNumber</span>
+                <br/>
+                <span class="ignored-method-name">emptyRespondentFirstName</span>
+                <br/>
+                <span class="ignored-method-name">emptyRespondentAdvocateContactNumber</span>
+                <br/>
                 <span class="ignored-method-name">emptyRecommendOic</span>
+                <br/>
+                <span class="ignored-method-name">emptyPetitionerFirstName</span>
+                <br/>
+                <span class="ignored-method-name">nullCaseNumber</span>
+                <br/>
+                <span class="ignored-method-name">emptyRespondentAddress</span>
+                <br/>
+                <span class="ignored-method-name">emptyPetitionerAddress</span>
+                <br/>
+                <span class="ignored-method-name">emptyRespondentAdvocateLastName</span>
+                <br/>
+                <span class="ignored-method-name">emptyRespondentDepartmentName</span>
+                <br/>
+                <span class="ignored-method-name">nullPolicyOrNonPolicyMatter</span>
+                <br/>
+                <span class="ignored-method-name">emptyRespondentAdvocateFirstName</span>
+                <br/>
+                <span class="ignored-method-name">nullPetitionerAdvocateContactNumber</span>
+                <br/>
+                <span class="ignored-method-name">inValidPreviousHearingDate</span>
+                <br/>
+                <span class="ignored-method-name">nullCaseSummary</span>
+                <br/>
+                <span class="ignored-method-name">emptyCaseSummary</span>
+                <br/>
+                <span class="ignored-method-name">inValidNextHearingDate</span>
+                <br/>
+                <span class="ignored-method-name">nullRespondentAddress</span>
+                <br/>
+                <span class="ignored-method-name">nullPetitionerAdvocateFirstName</span>
+                <br/>
+                <span class="ignored-method-name">nullRespondentAdvocateFirstName</span>
+                <br/>
+                <span class="ignored-method-name">nullRespondentContactNumber</span>
+                <br/>
+                <span class="ignored-method-name">nullRecommendOic</span>
+                <br/>
+                <span class="ignored-method-name">emptyCaseStage</span>
+                <br/>
+                <span class="ignored-method-name">nullCaseStage</span>
+                <br/>
+                <span class="ignored-method-name">emptyPetitionerAdvocateLastName</span>
+                <br/>
+                <span class="ignored-method-name">emptyPetitionerAdvocateFirstName</span>
+                <br/>
+                <span class="ignored-method-name">nullPetitionerAdvocateLastName</span>
+                <br/>
+                <span class="ignored-method-name">emptySectionNumber</span>
+                <br/>
+                <span class="ignored-method-name">nullPetitionerType</span>
+                <br/>
+                <span class="ignored-method-name">nullPreviousHearingDate</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -411,7 +514,7 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">nullCaseNumber</span>
+                <span class="method-name">emptyCaseNumber</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

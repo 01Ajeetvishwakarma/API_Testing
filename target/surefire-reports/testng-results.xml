@@ -2,12 +2,12 @@
 <testng-results ignored="68" total="69" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-09T14:08:03 IST" name="iLMS_Piramal" finished-at="2023-02-09T14:08:07 IST" duration-ms="4210">
+  <suite started-at="2023-02-09T16:54:39 IST" name="iLMS_Piramal" finished-at="2023-02-09T16:54:43 IST" duration-ms="4000">
     <groups>
     </groups>
-    <test started-at="2023-02-09T14:08:03 IST" name="Piramal API Automation" finished-at="2023-02-09T14:08:07 IST" duration-ms="4210">
+    <test started-at="2023-02-09T16:54:39 IST" name="Piramal API Automation" finished-at="2023-02-09T16:54:43 IST" duration-ms="4000">
       <class name="case_module.CaseCreate">
-        <test-method signature="nullCaseNumber()[pri:0, instance:case_module.CaseCreate@2e3967ea]" started-at="2023-02-09T14:08:03 IST" name="nullCaseNumber" finished-at="2023-02-09T14:08:07 IST" duration-ms="3951" status="FAIL">
+        <test-method signature="emptyCaseNumber()[pri:0, instance:case_module.CaseCreate@2e3967ea]" started-at="2023-02-09T16:54:39 IST" name="emptyCaseNumber" finished-at="2023-02-09T16:54:43 IST" duration-ms="3731" status="FAIL">
           <exception class="java.net.ConnectException">
             <message>
               <![CDATA[Connection refused: connect]]>
@@ -119,8 +119,8 @@ at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCal
 at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:176)
 at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
 at iLMSActions.casemodule.CreateCase.caseCreate(CreateCase.java:48)
-at iLMSActions.casemodule.CreateCaseActions.nullCaseNumber(CreateCaseActions.java:79)
-at case_module.CaseCreate.nullCaseNumber(CaseCreate.java:96)
+at iLMSActions.casemodule.CreateCaseActions.emptyCaseNumber(CreateCaseActions.java:78)
+at case_module.CaseCreate.emptyCaseNumber(CaseCreate.java:90)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -158,7 +158,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           </exception> <!-- java.net.ConnectException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- nullCaseNumber -->
+        </test-method> <!-- emptyCaseNumber -->
       </class> <!-- case_module.CaseCreate -->
     </test> <!-- Piramal API Automation -->
   </suite> <!-- iLMS_Piramal -->

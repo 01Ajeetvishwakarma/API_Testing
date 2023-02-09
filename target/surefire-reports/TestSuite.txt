@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.141 s <<< FAILURE! - in TestSuite
-case_module.CaseCreate.nullCaseNumber  Time elapsed: 3.956 s  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.243 s <<< FAILURE! - in TestSuite
+case_module.CaseCreate.emptyCaseNumber  Time elapsed: 3.75 s  <<< FAILURE!
 java.net.ConnectException: Connection refused: connect
 	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
 	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
@@ -109,8 +109,8 @@ java.net.ConnectException: Connection refused: connect
 	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:176)
 	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
 	at iLMSActions.casemodule.CreateCase.caseCreate(CreateCase.java:48)
-	at iLMSActions.casemodule.CreateCaseActions.nullCaseNumber(CreateCaseActions.java:79)
-	at case_module.CaseCreate.nullCaseNumber(CaseCreate.java:96)
+	at iLMSActions.casemodule.CreateCaseActions.emptyCaseNumber(CreateCaseActions.java:78)
+	at case_module.CaseCreate.emptyCaseNumber(CaseCreate.java:90)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

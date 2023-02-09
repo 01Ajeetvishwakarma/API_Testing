@@ -8,7 +8,7 @@
         <classes>
             <class name="case_module.CaseCreate">
                 <methods>
-                    <include name="nullCaseNumber"/>
+                    <include name="emptyCaseNumber"/>
                 </methods>
             </class>
 
