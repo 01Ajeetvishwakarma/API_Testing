@@ -9,11 +9,11 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">iLMS_Piramal</th></tr>
-<tr><td><a href="#t0">Piramal API Automation</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">3,858</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Piramal API Automation</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">4,351</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">iLMS_Piramal</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Piramal API Automation &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">case_module.CaseCreate</td><td><a href="#m0">nullCaseNumber1</a></td><td rowspan="1">1675843569157</td><td rowspan="1">3630</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">iLMS_Piramal</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Piramal API Automation &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">case_module.CaseCreate</td><td><a href="#m0">nullCaseNumber</a></td><td rowspan="1">1675941352730</td><td rowspan="1">4073</td></tr></tbody>
 </table>
-<h2>Piramal API Automation</h2><h3 id="m0">case_module.CaseCreate#nullCaseNumber1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.net.ConnectException: Connection refused: connect
+<h2>Piramal API Automation</h2><h3 id="m0">case_module.CaseCreate#nullCaseNumber</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.net.ConnectException: Connection refused: connect
 	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
 	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
 	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412)
@@ -118,9 +118,9 @@
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:176)
 	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
-	at iLMSActions.casemodule.CreateCaseActions.createCase(CreateCaseActions.java:34)
-	at iLMSActions.casemodule.CreateCaseActions.nullCaseNumber2(CreateCaseActions.java:94)
-	at case_module.CaseCreate.nullCaseNumber1(CaseCreate.java:106)
+	at iLMSActions.casemodule.CreateCase.caseCreate(CreateCase.java:48)
+	at iLMSActions.casemodule.CreateCaseActions.nullCaseNumber(CreateCaseActions.java:92)
+	at case_module.CaseCreate.nullCaseNumber(CaseCreate.java:96)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
